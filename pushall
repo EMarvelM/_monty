@@ -2,6 +2,9 @@
 
 ########################################
 # Rest of the script remains the same...
+# Start a timer
+start_time=$(date +%s)
+
 # Iterate through all the files in the directory and add, commit, and push them
 for file in *
 do
@@ -13,4 +16,11 @@ do
   fi
   sleep 5
 done
+
+# End the timer and calculate the execution time
+end_time=$(date +%s)
+execution_time=$((end_time - start_time))
+
+# Display how long the execution took in a cool manner
+echo "Execution completed in $execution_time seconds. 🚀"
 ########################################
