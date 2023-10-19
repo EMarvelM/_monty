@@ -7,20 +7,20 @@
  */
 void f_rotr(stack_t **front, __attribute__((unused)) unsigned int numPop)
 {
-	stack_t *copy;
+	stack_t *clone;
 
-	copy = *front;
+	clone = *front;
 	if (*front == NULL || (*front)->next == NULL)
 	{
 		return;
 	}
-	while (copy->next)
+	while (clone->next)
 	{
-		copy = copy->next;
+		clone = clone->next;
 	}
-	copy->next = *front;
-	copy->prev->next = NULL;
-	copy->prev = NULL;
-	(*front)->prev = copy;
-	(*front) = copy;
+	clone->next = *front;
+	clone->prev->next = NULL;
+	clone->prev = NULL;
+	(*front)->prev = clone;
+	(*front) = clone;
 }
