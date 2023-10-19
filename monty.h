@@ -60,7 +60,8 @@ typedef struct instruction_s
 } instruction_t;
 
 /*fncs not def and not used - E*/
-/*char *cust_realloc(char *block_ptr, unsigned int old_sz, unsigned int new_sz);*/
+/*char *cust_realloc(char *block_ptr, unsigned int old_sz,*/
+/*unsigned int new_sz);*/
 /*ssize_t read_stdin(char **line_ptr, int file_pointer);*/
 /*char  *flush_line(char *line_content);*/
 
@@ -68,7 +69,8 @@ typedef struct instruction_s
 void f_push(stack_t **front, unsigned int num);
 void f_pall(stack_t **front, unsigned int num);
 void f_pint(stack_t **front, unsigned int num);
-int execute(char *line_content, stack_t **front, unsigned int num_popped, FILE *file_pointer);
+int execute(char *line_content, stack_t **front, unsigned int num_popped,
+FILE *file_pointer);
 void free_stack(stack_t *front);
 void f_pop(stack_t **front, unsigned int num_popped);
 void f_swap(stack_t **front, unsigned int num_popped);
