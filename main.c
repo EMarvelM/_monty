@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	size_t size = 0;
 	ssize_t read_line = 1;
 	stack_t *stack = NULL;
-	unsigned int counter = 0;
+	unsigned int num_popped = 0;
 
 	if (argc != 2)
 	{
@@ -32,10 +32,10 @@ int main(int argc, char *argv[])
 		line_content = NULL;
 		read_line = getline(&line_content, &size, file_pointer);
 		custom_struct.line_content = line_content;
-		counter++;
+		num_popped++;
 		if (read_line > 0)
 		{
-			execute(line_content, &stack, counter, file_pointer);
+			execute(line_content, &stack, num_popped, file_pointer);
 		}
 		free(line_content);
 	}
