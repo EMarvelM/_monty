@@ -7,13 +7,13 @@
 */
 void f_mul(stack_t **front, unsigned int num_popped)
 {
-	stack_t *h;
+	stack_t *n_clone;
 	int len = 0, aux;
 
-	h = *front;
-	while (h)
+	n_clone = *front;
+	while (n_clone)
 	{
-		h = h->next;
+		n_clone = n_clone->next;
 		len++;
 	}
 	if (len < 2)
@@ -24,9 +24,9 @@ void f_mul(stack_t **front, unsigned int num_popped)
 		free_stack(*front);
 		exit(EXIT_FAILURE);
 	}
-	h = *front;
-	aux = h->next->n * h->n;
-	h->next->n = aux;
-	*front = h->next;
-	free(h);
+	n_clone = *front;
+	aux = n_clone->next->n * n_clone->n;
+	n_clone->next->n = aux;
+	*front = n_clone->next;
+	free(n_clone);
 }
