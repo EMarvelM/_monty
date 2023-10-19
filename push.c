@@ -7,17 +7,17 @@
 */
 void f_push(stack_t **front, unsigned int numPop)
 {
-	int n, j = 0, flag = 0;
+	int k = 0, n, s_q_flag = 0;
 
 	if (custom_struct.argument)
 	{
 		if (custom_struct.argument[0] == '-')
-			j++;
-		for (; custom_struct.argument[j] != '\0'; j++)
+			k++;
+		for (; custom_struct.argument[k] != '\0'; k++)
 		{
-			if (custom_struct.argument[j] > 57 || custom_struct.argument[j] < 48)
-				flag = 1; }
-		if (flag == 1)
+			if (custom_struct.argument[k] > 57 || custom_struct.argument[k] < 48)
+				s_q_flag = 1; }
+		if (s_q_flag == 1)
 		{ fprintf(stderr, "L%d: usage: push integer\n", numPop);
 			fclose(custom_struct.file_ptr);
 			free(custom_struct.line_cont);
