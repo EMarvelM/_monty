@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 		}
 		free(line_cont);
 	}
-	free_stack(stack);
+	freeStacks(stack);
 	fclose(file_ptr);
 return (0);
 }
