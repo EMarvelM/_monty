@@ -3,13 +3,13 @@
  * f_pstr - prints the string starting at the top of the stack,
  * followed by a new
  * @front: stack front
- * @counter: line_number
+ * @num_popped: line_number
  * Return: no return
 */
-void f_pstr(stack_t **front, unsigned int counter)
+void f_pstr(stack_t **front, unsigned int num_popped)
 {
 	stack_t *h;
-	(void)counter;
+	(void)num_popped;
 
 	h = *front;
 	while (h)
