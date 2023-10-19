@@ -2,10 +2,10 @@
 /**
   *f_rotr- rotates the stack to the bottom
   *@front: stack front
-  *@num_popped: line_number
+  *@numPop: line_number
   *Return: no return
  */
-void f_rotr(stack_t **front, __attribute__((unused)) unsigned int num_popped)
+void f_rotr(stack_t **front, __attribute__((unused)) unsigned int numPop)
 {
 	stack_t *copy;
 
