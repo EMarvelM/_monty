@@ -7,7 +7,7 @@
 */
 void f_pop(stack_t **front, unsigned int num_popped)
 {
-	stack_t *h;
+	stack_t *n_clone;
 
 	if (*front == NULL)
 	{
@@ -17,7 +17,7 @@ void f_pop(stack_t **front, unsigned int num_popped)
 		free_stack(*front);
 		exit(EXIT_FAILURE);
 	}
-	h = *front;
-	*front = h->next;
-	free(h);
+	n_clone = *front;
+	*front = n_clone->next;
+	free(n_clone);
 }
