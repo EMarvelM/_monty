@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
-  *f_sub- sustration
+  *monty_nodesub- sustration
   *@front: stack front
   *@numPop: line_number
   *Return: no return
  */
-void f_sub(stack_t **front, unsigned int numPop)
+void monty_nodesub(stack_t **front, unsigned int numPop)
 {
 	stack_t *_get_n;
 	int subst, monty_nodes;
@@ -18,7 +18,7 @@ void f_sub(stack_t **front, unsigned int numPop)
 		fprintf(stderr, "L%d: can't sub, stack too short\n", numPop);
 		fclose(custom_struct.file_ptr);
 		free(custom_struct.line_cont);
-		free_stack(*front);
+		freeStacks(*front);
 		exit(EXIT_FAILURE);
 	}
 	_get_n = *front;
