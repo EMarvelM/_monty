@@ -68,24 +68,24 @@ typedef struct instruction_s
 void f_push(stack_t **front, unsigned int num);
 void f_pall(stack_t **front, unsigned int num);
 void f_pint(stack_t **front, unsigned int num);
-int execute(char *line_content, stack_t **front, unsigned int counter, FILE *file_pointer);
+int execute(char *line_content, stack_t **front, unsigned int num_popped, FILE *file_pointer);
 void free_stack(stack_t *front);
-void f_pop(stack_t **front, unsigned int counter);
-void f_swap(stack_t **front, unsigned int counter);
-void f_add(stack_t **front, unsigned int counter);
-void f_nop(stack_t **front, unsigned int counter);
-void f_sub(stack_t **front, unsigned int counter);
-void f_div(stack_t **front, unsigned int counter);
-void f_mul(stack_t **front, unsigned int counter);
-void f_mod(stack_t **front, unsigned int counter);
-void f_pchar(stack_t **front, unsigned int counter);
-void f_pstr(stack_t **front, unsigned int counter);
-void f_rotl(stack_t **front, unsigned int counter);
-void f_rotr(stack_t **front, __attribute__((unused)) unsigned int counter);
+void f_pop(stack_t **front, unsigned int num_popped);
+void f_swap(stack_t **front, unsigned int num_popped);
+void f_add(stack_t **front, unsigned int num_popped);
+void f_nop(stack_t **front, unsigned int num_popped);
+void f_sub(stack_t **front, unsigned int num_popped);
+void f_div(stack_t **front, unsigned int num_popped);
+void f_mul(stack_t **front, unsigned int num_popped);
+void f_mod(stack_t **front, unsigned int num_popped);
+void f_pchar(stack_t **front, unsigned int num_popped);
+void f_pstr(stack_t **front, unsigned int num_popped);
+void f_rotl(stack_t **front, unsigned int num_popped);
+void f_rotr(stack_t **front, __attribute__((unused)) unsigned int num_popped);
 void addnode(stack_t **front, int n);
 void addqueue(stack_t **front, int n);
-void f_queue(stack_t **front, unsigned int counter);
-void f_stack(stack_t **front, unsigned int counter);
+void f_queue(stack_t **front, unsigned int num_popped);
+void f_stack(stack_t **front, unsigned int num_popped);
 
 
 #endif /*MONTY_H*/
