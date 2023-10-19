@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * f_add - adds the top two elements of the stack.
+ * monty_nodeadd - adds the top two elements of the stack.
  * @front: stack front
  * @numPop: line_number
  * Return: no return
 */
-void f_add(stack_t **front, unsigned int numPop)
+void monty_nodeadd(stack_t **front, unsigned int numPop)
 {
 	stack_t *n_clone;
 	int length = 0, _get_n;
@@ -21,7 +21,7 @@ void f_add(stack_t **front, unsigned int numPop)
 		fprintf(stderr, "L%d: can't add, stack too short\n", numPop);
 		fclose(custom_struct.file_ptr);
 		free(custom_struct.line_cont);
-		free_stack(*front);
+		freeStacks(*front);
 		exit(EXIT_FAILURE);
 	}
 	n_clone = *front;
