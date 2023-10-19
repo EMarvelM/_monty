@@ -3,14 +3,15 @@
 /**
  *monty_noderotr- rotates the stack to the bottom
  *@front: stack front
- *@numPop: line_number
+ *@numP: line_number
  *Return: no return
  */
-void monty_noderotr(stack_t **front, __attribute__((unused)) unsigned int numPop)
+void monty_noderotr(stack_t **front, unsigned int numP)
 {
 	stack_t *clone;
 
 	clone = *front;
+	(void)numP;
 	if (*front == NULL || (*front)->next == NULL)
 	{
 		return;

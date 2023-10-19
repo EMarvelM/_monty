@@ -9,7 +9,7 @@ custom_struct_t custom_struct = {NULL, NULL, NULL, 0};
 int main(int argc, char *argv[])
 {
 	stack_t *stack = NULL;
-	unsigned int numPop = 0;
+	unsigned int numP = 0;
 	ssize_t read_line = 1;
 	char *line_cont;
 	FILE *file_ptr;
@@ -33,10 +33,10 @@ int main(int argc, char *argv[])
 		line_cont = NULL;
 		read_line = getline(&line_cont, &sz, file_ptr);
 		custom_struct.line_cont = line_cont;
-		numPop++;
+		numP++;
 		if (read_line > 0)
 		{
-			exec(line_cont, &stack, numPop, file_ptr);
+			exec(line_cont, &stack, numP, file_ptr);
 		}
 		free(line_cont);
 	}

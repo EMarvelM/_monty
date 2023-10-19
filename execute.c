@@ -4,11 +4,11 @@
  * exec - Executes the opcode.
  * @line_cont: Line content
  * @stack: Front linked list - stack
- * @numPop: Line counter
+ * @numP: Line counter
  * @file_ptr: Pointer to Monty file
  * Return: No return
  */
-int exec(char *line_cont, stack_t **stack, unsigned int numPop, FILE *file_ptr)
+int exec(char *line_cont, stack_t **stack, unsigned int numP, FILE *file_ptr)
 {
 	instruction_t opst[] = {
 		{"push", monty_nodepush}, {"pall", monty_nodepall},
@@ -35,14 +35,14 @@ int exec(char *line_cont, stack_t **stack, unsigned int numPop, FILE *file_ptr)
 	{
 		if (strcmp(op, opst[i].opcode) == 0)
 		{
-			opst[i].f(stack, numPop);
+			opst[i].f(stack, numP);
 			return (0);
 		}
 	}
 
 	if (op && opst[i].opcode == NULL)
 	{
-		fprintf(stderr, "L%d: unknown instruction %s\n", numPop, op);
+		fprintf(stderr, "L%d: unknown instruction %s\n", numP, op);
 		fclose(file_ptr);
 		free(line_cont);
 		freeStacks(*stack);

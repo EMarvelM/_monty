@@ -2,13 +2,14 @@
 /**
   *monty_noderotl- rotates the stack to the top
   *@front: stack front
-  *@numPop: line_number
+  *@numP: line_number
   *Return: no return
  */
-void monty_noderotl(stack_t **front, __attribute__((unused)) unsigned int numPop)
+void monty_noderotl(stack_t **front, unsigned int numP)
 {
 	stack_t *temp = *front, *_get_n;
 
+	(void)numP;
 	if (*front == NULL || (*front)->next == NULL)
 	{
 		return;

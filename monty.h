@@ -70,24 +70,24 @@ typedef struct instruction_s
 void monty_nodepush(stack_t **front, unsigned int num);
 void monty_nodepall(stack_t **front, unsigned int num);
 void monty_nodepint(stack_t **front, unsigned int num);
-int exec(char *, stack_t **, unsigned int numPop, FILE *);
+int exec(char *, stack_t **, unsigned int numP, FILE *);
 void freeStacks(stack_t *front);
-void monty_nodepop(stack_t **front, unsigned int numPop);
-void monty_nodeswap(stack_t **front, unsigned int numPop);
-void monty_nodeadd(stack_t **front, unsigned int numPop);
-void monty_nodenop(stack_t **front, unsigned int numPop);
-void monty_nodesub(stack_t **front, unsigned int numPop);
-void monty_nodediv(stack_t **front, unsigned int numPop);
-void monty_nodemul(stack_t **front, unsigned int numPop);
-void monty_nodemod(stack_t **front, unsigned int numPop);
-void monty_nodepchar(stack_t **front, unsigned int numPop);
-void monty_nodepstr(stack_t **front, unsigned int numPop);
-void monty_noderotl(stack_t **front, unsigned int numPop);
-void monty_noderotr(stack_t **front, __attribute__((unused)) unsigned int numPop);
+void monty_nodepop(stack_t **front, unsigned int numP);
+void monty_nodeswap(stack_t **front, unsigned int numP);
+void monty_nodeadd(stack_t **front, unsigned int numP);
+void monty_nodenop(stack_t **front, unsigned int numP);
+void monty_nodesub(stack_t **front, unsigned int numP);
+void monty_nodediv(stack_t **front, unsigned int numP);
+void monty_nodemul(stack_t **front, unsigned int numP);
+void monty_nodemod(stack_t **front, unsigned int numP);
+void monty_nodepchar(stack_t **front, unsigned int numP);
+void monty_nodepstr(stack_t **front, unsigned int numP);
+void monty_noderotl(stack_t **front, unsigned int numP);
+void monty_noderotr(stack_t **, unsigned int numP);
 void add_Node(stack_t **front, int n);
 void add_Queue(stack_t **front, int n);
-void monty_nodequeue(stack_t **front, unsigned int numPop);
-void monty_nodestack(stack_t **front, unsigned int numPop);
+void monty_nodequeue(stack_t **front, unsigned int numP);
+void monty_nodestack(stack_t **front, unsigned int numP);
 
 
 #endif /*MONTY_H*/
