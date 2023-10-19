@@ -1,13 +1,13 @@
 #include "monty.h"
 /**
  * f_queue - prints the top
- * @head: stack head
+ * @front: stack front
  * @counter: line_number
  * Return: no return
 */
-void f_queue(stack_t **head, unsigned int counter)
+void f_queue(stack_t **front, unsigned int counter)
 {
-	(void)head;
+	(void)front;
 	(void)counter;
 	custom_struct.stack_queue_flag = 1;
 }
@@ -15,14 +15,14 @@ void f_queue(stack_t **head, unsigned int counter)
 /**
  * addqueue - add node to the tail stack
  * @n: new_value
- * @head: head of the stack
+ * @front: front of the stack
  * Return: no return
 */
-void addqueue(stack_t **head, int n)
+void addqueue(stack_t **front, int n)
 {
 	stack_t *new_node, *aux;
 
-	aux = *head;
+	aux = *front;
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
@@ -37,7 +37,7 @@ void addqueue(stack_t **head, int n)
 	}
 	if (!aux)
 	{
-		*head = new_node;
+		*front = new_node;
 		new_node->prev = NULL;
 	}
 	else
