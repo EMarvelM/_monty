@@ -1,12 +1,12 @@
 #include "monty.h"
 /**
- * f_mod - computes the rest of the division of the second
+ * monty_nodemod - computes the rest of the division of the second
  * top element of the stack by the top element of the stack
  * @front: stack front
  * @numPop: line_number
  * Return: no return
 */
-void f_mod(stack_t **front, unsigned int numPop)
+void monty_nodemod(stack_t **front, unsigned int numPop)
 {
 	stack_t *n_clone;
 	int length = 0, _get_n;
@@ -22,7 +22,7 @@ void f_mod(stack_t **front, unsigned int numPop)
 		fprintf(stderr, "L%d: can't mod, stack too short\n", numPop);
 		fclose(custom_struct.file_ptr);
 		free(custom_struct.line_cont);
-		free_stack(*front);
+		freeStacks(*front);
 		exit(EXIT_FAILURE);
 	}
 	n_clone = *front;
@@ -31,7 +31,7 @@ void f_mod(stack_t **front, unsigned int numPop)
 		fprintf(stderr, "L%d: division by zero\n", numPop);
 		fclose(custom_struct.file_ptr);
 		free(custom_struct.line_cont);
-		free_stack(*front);
+		freeStacks(*front);
 		exit(EXIT_FAILURE);
 	}
 	_get_n = n_clone->next->n % n_clone->n;
