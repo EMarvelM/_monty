@@ -1,12 +1,12 @@
 #include "monty.h"
 /**
- * f_pstr - prints the string starting at the top of the stack,
+ * monty_nodepstr - prints the string starting at the top of the stack,
  * followed by a new
  * @front: stack front
  * @numPop: line_number
  * Return: no return
 */
-void f_pstr(stack_t **front, unsigned int numPop)
+void monty_nodepstr(stack_t **front, unsigned int numPop)
 {
 	stack_t *n_clone;
 	(void)numPop;
