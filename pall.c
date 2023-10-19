@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * f_pall - prints the stack
+ * monty_nodepall - prints the stack
  * @front: stack front
  * @numPop: no used
  * Return: no return
 */
-void f_pall(stack_t **front, unsigned int numPop)
+void monty_nodepall(stack_t **front, unsigned int numPop)
 {
 	stack_t *n_clone;
 	(void)numPop;
