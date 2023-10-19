@@ -7,13 +7,13 @@
 */
 void f_div(stack_t **front, unsigned int num_popped)
 {
-	stack_t *h;
+	stack_t *n_clone;
 	int len = 0, aux;
 
-	h = *front;
-	while (h)
+	n_clone = *front;
+	while (n_clone)
 	{
-		h = h->next;
+		n_clone = n_clone->next;
 		len++;
 	}
 	if (len < 2)
@@ -24,8 +24,8 @@ void f_div(stack_t **front, unsigned int num_popped)
 		free_stack(*front);
 		exit(EXIT_FAILURE);
 	}
-	h = *front;
-	if (h->n == 0)
+	n_clone = *front;
+	if (n_clone->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", num_popped);
 		fclose(custom_struct.file_pointer);
@@ -33,8 +33,8 @@ void f_div(stack_t **front, unsigned int num_popped)
 		free_stack(*front);
 		exit(EXIT_FAILURE);
 	}
-	aux = h->next->n / h->n;
-	h->next->n = aux;
-	*front = h->next;
-	free(h);
+	aux = n_clone->next->n / n_clone->n;
+	n_clone->next->n = aux;
+	*front = n_clone->next;
+	free(n_clone);
 }
