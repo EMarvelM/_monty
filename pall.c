@@ -2,13 +2,13 @@
 /**
  * f_pall - prints the stack
  * @front: stack front
- * @num_popped: no used
+ * @numPop: no used
  * Return: no return
 */
-void f_pall(stack_t **front, unsigned int num_popped)
+void f_pall(stack_t **front, unsigned int numPop)
 {
 	stack_t *n_clone;
-	(void)num_popped;
+	(void)numPop;
 
 	n_clone = *front;
 	if (n_clone == NULL)
