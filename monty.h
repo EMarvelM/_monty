@@ -27,12 +27,13 @@ typedef struct stack_s
 } stack_t;
 
 /**
- * struct custom_struct_s - variables -args, file_pointer, line line_content
+ * struct custom_struct_s - Custom structure to store variables
  * @argument: value
- * @file_pointer: pointer to monty file_pointer
- * @line_content: line line_content
- * @stack_queue_flag: flag change stack <-> queue
- * Description: carries values through the program
+ * @file_pointer: pointer to a file (monty file), actual usuage - test
+ * @line_content: Content of a file (read lines)
+ * @stack_queue_flag: Flag to switch between stack and queue
+ *
+ * Description: This structure holds various values used in the program.
  */
 typedef struct custom_struct_s
 {
@@ -41,6 +42,7 @@ typedef struct custom_struct_s
 	char *line_content;
 	int stack_queue_flag;
 }  custom_struct_t;
+/*make custom datas available all the file*/
 extern custom_struct_t custom_struct;
 
 /**
