@@ -59,10 +59,12 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/*fncs not def and not used - E*/
+/*char *cust_realloc(char *ptr, unsigned int old_size, unsigned int new_size);*/
+/*ssize_t getstdin(char **lineptr, int file_pointer);*/
+/*char  *flush_line(char *line_content);*/
+
 /*usr def fncs*/
-char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
-ssize_t getstdin(char **lineptr, int file_pointer);
-char  *clean_line(char *line_content);
 void f_push(stack_t **head, unsigned int number);
 void f_pall(stack_t **head, unsigned int number);
 void f_pint(stack_t **head, unsigned int number);
