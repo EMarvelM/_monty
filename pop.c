@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * f_pop - prints the top
+ * monty_nodepop - prints the top
  * @front: stack front
  * @numPop: line_number
  * Return: no return
 */
-void f_pop(stack_t **front, unsigned int numPop)
+void monty_nodepop(stack_t **front, unsigned int numPop)
 {
 	stack_t *n_clone;
 
@@ -14,7 +14,7 @@ void f_pop(stack_t **front, unsigned int numPop)
 		fprintf(stderr, "L%d: can't pop an empty stack\n", numPop);
 		fclose(custom_struct.file_ptr);
 		free(custom_struct.line_cont);
-		free_stack(*front);
+		freeStacks(*front);
 		exit(EXIT_FAILURE);
 	}
 	n_clone = *front;
