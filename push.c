@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * f_push - add node to the stack
+ * monty_nodepush - add node to the stack
  * @front: stack front
  * @numPop: line_number
  * Return: no return
 */
-void f_push(stack_t **front, unsigned int numPop)
+void monty_nodepush(stack_t **front, unsigned int numPop)
 {
 	int k = 0, n, s_q_flag = 0;
 
@@ -21,17 +21,17 @@ void f_push(stack_t **front, unsigned int numPop)
 		{ fprintf(stderr, "L%d: usage: push integer\n", numPop);
 			fclose(custom_struct.file_ptr);
 			free(custom_struct.line_cont);
-			free_stack(*front);
+			freeStacks(*front);
 			exit(EXIT_FAILURE); }}
 	else
 	{ fprintf(stderr, "L%d: usage: push integer\n", numPop);
 		fclose(custom_struct.file_ptr);
 		free(custom_struct.line_cont);
-		free_stack(*front);
+		freeStacks(*front);
 		exit(EXIT_FAILURE); }
 	n = atoi(custom_struct.argument);
 	if (custom_struct.stack_queue_flag == 0)
-		addnode(front, n);
+		add_Node(front, n);
 	else
-		addqueue(front, n);
+		add_Queue(front, n);
 }
