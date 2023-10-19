@@ -66,27 +66,27 @@ typedef struct instruction_s
 /*char  *flush_line(char *line_cont);*/
 
 /*usr def fncs*/
-void f_push(stack_t **front, unsigned int num);
-void f_pall(stack_t **front, unsigned int num);
-void f_pint(stack_t **front, unsigned int num);
+void monty_nodepush(stack_t **front, unsigned int num);
+void monty_nodepall(stack_t **front, unsigned int num);
+void monty_nodepint(stack_t **front, unsigned int num);
 int exec(char *, stack_t **, unsigned int numPop, FILE *);
-void free_stack(stack_t *front);
-void f_pop(stack_t **front, unsigned int numPop);
-void f_swap(stack_t **front, unsigned int numPop);
-void f_add(stack_t **front, unsigned int numPop);
-void f_nop(stack_t **front, unsigned int numPop);
-void f_sub(stack_t **front, unsigned int numPop);
-void f_div(stack_t **front, unsigned int numPop);
-void f_mul(stack_t **front, unsigned int numPop);
-void f_mod(stack_t **front, unsigned int numPop);
-void f_pchar(stack_t **front, unsigned int numPop);
-void f_pstr(stack_t **front, unsigned int numPop);
-void f_rotl(stack_t **front, unsigned int numPop);
-void f_rotr(stack_t **front, __attribute__((unused)) unsigned int numPop);
-void addnode(stack_t **front, int n);
-void addqueue(stack_t **front, int n);
-void f_queue(stack_t **front, unsigned int numPop);
-void f_stack(stack_t **front, unsigned int numPop);
+void freeStacks(stack_t *front);
+void monty_nodepop(stack_t **front, unsigned int numPop);
+void monty_nodeswap(stack_t **front, unsigned int numPop);
+void monty_nodeadd(stack_t **front, unsigned int numPop);
+void monty_nodenop(stack_t **front, unsigned int numPop);
+void monty_nodesub(stack_t **front, unsigned int numPop);
+void monty_nodediv(stack_t **front, unsigned int numPop);
+void monty_nodemul(stack_t **front, unsigned int numPop);
+void monty_nodemod(stack_t **front, unsigned int numPop);
+void monty_nodepchar(stack_t **front, unsigned int numPop);
+void monty_nodepstr(stack_t **front, unsigned int numPop);
+void monty_noderotl(stack_t **front, unsigned int numPop);
+void monty_noderotr(stack_t **front, __attribute__((unused)) unsigned int numPop);
+void add_Node(stack_t **front, int n);
+void add_Queue(stack_t **front, int n);
+void monty_nodequeue(stack_t **front, unsigned int numPop);
+void monty_nodestack(stack_t **front, unsigned int numPop);
 
 
 #endif /*MONTY_H*/
