@@ -7,7 +7,7 @@
  */
 void f_rotl(stack_t **front,  __attribute__((unused)) unsigned int numPop)
 {
-	stack_t *tmp = *front, *_get_n;
+	stack_t *temp = *front, *_get_n;
 
 	if (*front == NULL || (*front)->next == NULL)
 	{
@@ -15,12 +15,12 @@ void f_rotl(stack_t **front,  __attribute__((unused)) unsigned int numPop)
 	}
 	_get_n = (*front)->next;
 	_get_n->prev = NULL;
-	while (tmp->next != NULL)
+	while (temp->next != NULL)
 	{
-		tmp = tmp->next;
+		temp = temp->next;
 	}
-	tmp->next = *front;
+	temp->next = *front;
 	(*front)->next = NULL;
-	(*front)->prev = tmp;
+	(*front)->prev = temp;
 	(*front) = _get_n;
 }
