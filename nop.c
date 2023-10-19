@@ -2,11 +2,11 @@
 /**
   *f_nop- nothing
   *@front: stack front
-  *@counter: line_number
+  *@num_popped: line_number
   *Return: no return
  */
-void f_nop(stack_t **front, unsigned int counter)
+void f_nop(stack_t **front, unsigned int num_popped)
 {
-	(void) counter;
+	(void) num_popped;
 	(void) front;
 }
