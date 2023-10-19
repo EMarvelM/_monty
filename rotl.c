@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
-  *f_rotl- rotates the stack to the top
+  *monty_noderotl- rotates the stack to the top
   *@front: stack front
   *@numPop: line_number
   *Return: no return
  */
-void f_rotl(stack_t **front,  __attribute__((unused)) unsigned int numPop)
+void monty_noderotl(stack_t **front,  __attribute__((unused)) unsigned int numPop)
 {
 	stack_t *temp = *front, *_get_n;
 
