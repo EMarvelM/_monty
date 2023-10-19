@@ -2,19 +2,19 @@
 /**
   *f_rotl- rotates the stack to the top
   *@front: stack front
-  *@num_popped: line_number
+  *@numPop: line_number
   *Return: no return
  */
-void f_rotl(stack_t **front,  __attribute__((unused)) unsigned int num_popped)
+void f_rotl(stack_t **front,  __attribute__((unused)) unsigned int numPop)
 {
-	stack_t *tmp = *front, *aux;
+	stack_t *tmp = *front, *_get_n;
 
 	if (*front == NULL || (*front)->next == NULL)
 	{
 		return;
 	}
-	aux = (*front)->next;
-	aux->prev = NULL;
+	_get_n = (*front)->next;
+	_get_n->prev = NULL;
 	while (tmp->next != NULL)
 	{
 		tmp = tmp->next;
@@ -22,5 +22,5 @@ void f_rotl(stack_t **front,  __attribute__((unused)) unsigned int num_popped)
 	tmp->next = *front;
 	(*front)->next = NULL;
 	(*front)->prev = tmp;
-	(*front) = aux;
+	(*front) = _get_n;
 }
