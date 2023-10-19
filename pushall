@@ -1,0 +1,16 @@
+#!/bin/bash
+
+########################################
+# Rest of the script remains the same...
+# Iterate through all the files in the directory and add, commit, and push them
+for file in *
+do
+  if [ -f "$file" ]; then
+    filename=$(basename -- "$file")
+    filename_without_extension="${filename%.*}"
+
+    echo "$filename_without_extension" | giter "$file"
+  fi
+  sleep 5
+done
+########################################
