@@ -60,8 +60,8 @@ typedef struct instruction_s
 } instruction_t;
 
 /*fncs not def and not used - E*/
-/*char *cust_realloc(char *ptr, unsigned int old_size, unsigned int new_size);*/
-/*ssize_t getstdin(char **lineptr, int file_pointer);*/
+/*char *cust_realloc(char *block_ptr, unsigned int old_sz, unsigned int new_sz);*/
+/*ssize_t read_stdin(char **line_ptr, int file_pointer);*/
 /*char  *flush_line(char *line_content);*/
 
 /*usr def fncs*/
