@@ -8,12 +8,12 @@
 void f_sub(stack_t **front, unsigned int numPop)
 {
 	stack_t *_get_n;
-	int sus, nodes;
+	int subst, monty_nodes;
 
 	_get_n = *front;
-	for (nodes = 0; _get_n != NULL; nodes++)
+	for (monty_nodes = 0; _get_n != NULL; monty_nodes++)
 		_get_n = _get_n->next;
-	if (nodes < 2)
+	if (monty_nodes < 2)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", numPop);
 		fclose(custom_struct.file_ptr);
@@ -22,8 +22,8 @@ void f_sub(stack_t **front, unsigned int numPop)
 		exit(EXIT_FAILURE);
 	}
 	_get_n = *front;
-	sus = _get_n->next->n - _get_n->n;
-	_get_n->next->n = sus;
+	subst = _get_n->next->n - _get_n->n;
+	_get_n->next->n = subst;
 	*front = _get_n->next;
 	free(_get_n);
 }
