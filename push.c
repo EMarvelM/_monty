@@ -2,10 +2,10 @@
 /**
  * f_push - add node to the stack
  * @front: stack front
- * @counter: line_number
+ * @num_popped: line_number
  * Return: no return
 */
-void f_push(stack_t **front, unsigned int counter)
+void f_push(stack_t **front, unsigned int num_popped)
 {
 	int n, j = 0, flag = 0;
 
@@ -18,13 +18,13 @@ void f_push(stack_t **front, unsigned int counter)
 			if (custom_struct.argument[j] > 57 || custom_struct.argument[j] < 48)
 				flag = 1; }
 		if (flag == 1)
-		{ fprintf(stderr, "L%d: usage: push integer\n", counter);
+		{ fprintf(stderr, "L%d: usage: push integer\n", num_popped);
 			fclose(custom_struct.file_pointer);
 			free(custom_struct.line_content);
 			free_stack(*front);
 			exit(EXIT_FAILURE); }}
 	else
-	{ fprintf(stderr, "L%d: usage: push integer\n", counter);
+	{ fprintf(stderr, "L%d: usage: push integer\n", num_popped);
 		fclose(custom_struct.file_pointer);
 		free(custom_struct.line_content);
 		free_stack(*front);
