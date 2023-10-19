@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * addnode - add node to the front stack
+ * add_Node - add node to the front stack
  * @front: front of the stack
  * @n: new_value
  * Return: no return
 */
-void addnode(stack_t **front, int n)
+void add_Node(stack_t **front, int n)
 {
 
 	stack_t *_newNode, *_get_n;
