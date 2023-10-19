@@ -27,21 +27,21 @@ typedef struct stack_s
 } stack_t;
 
 /**
- * struct bus_s - variables -args, file, line content
- * @arg: value
- * @file: pointer to monty file
- * @content: line content
- * @lifi: flag change stack <-> queue
+ * struct custom_struct_s - variables -args, file_pointer, line line_content
+ * @argument: value
+ * @file_pointer: pointer to monty file_pointer
+ * @line_content: line line_content
+ * @stack_queue_flag: flag change stack <-> queue
  * Description: carries values through the program
  */
-typedef struct bus_s
+typedef struct custom_struct_s
 {
-	char *arg;
-	FILE *file;
-	char *content;
-	int lifi;
-}  bus_t;
-extern bus_t bus;
+	char *argument;
+	FILE *file_pointer;
+	char *line_content;
+	int stack_queue_flag;
+}  custom_struct_t;
+extern custom_struct_t custom_struct;
 
 /**
  * struct instruction_s - opcode and its function
@@ -59,12 +59,12 @@ typedef struct instruction_s
 
 /*usr def fncs*/
 char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
-ssize_t getstdin(char **lineptr, int file);
-char  *clean_line(char *content);
+ssize_t getstdin(char **lineptr, int file_pointer);
+char  *clean_line(char *line_content);
 void f_push(stack_t **head, unsigned int number);
 void f_pall(stack_t **head, unsigned int number);
 void f_pint(stack_t **head, unsigned int number);
-int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
+int execute(char *line_content, stack_t **head, unsigned int counter, FILE *file_pointer);
 void free_stack(stack_t *head);
 void f_pop(stack_t **head, unsigned int counter);
 void f_swap(stack_t **head, unsigned int counter);

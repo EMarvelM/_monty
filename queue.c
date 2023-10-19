@@ -9,7 +9,7 @@ void f_queue(stack_t **head, unsigned int counter)
 {
 	(void)head;
 	(void)counter;
-	bus.lifi = 1;
+	custom_struct.stack_queue_flag = 1;
 }
 
 /**
