@@ -2,13 +2,13 @@
 /**
  * f_queue - prints the top
  * @front: stack front
- * @counter: line_number
+ * @num_popped: line_number
  * Return: no return
 */
-void f_queue(stack_t **front, unsigned int counter)
+void f_queue(stack_t **front, unsigned int num_popped)
 {
 	(void)front;
-	(void)counter;
+	(void)num_popped;
 	custom_struct.stack_queue_flag = 1;
 }
 
