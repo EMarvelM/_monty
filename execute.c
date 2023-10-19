@@ -10,21 +10,21 @@
 int exec(char *line_cont, stack_t **stack, unsigned int numPop, FILE *file_ptr)
 {
 	instruction_t opst[] = {
-				{"push", f_push}, {"pall", f_pall}, {"pint", f_pint},
-				{"pop", f_pop},
-				{"swap", f_swap},
-				{"add", f_add},
-				{"nop", f_nop},
-				{"sub", f_sub},
-				{"div", f_div},
-				{"mul", f_mul},
-				{"mod", f_mod},
-				{"pchar", f_pchar},
-				{"pstr", f_pstr},
-				{"rotl", f_rotl},
-				{"rotr", f_rotr},
-				{"queue", f_queue},
-				{"stack", f_stack},
+				{"push", monty_nodepush}, {"pall", monty_nodepall}, {"pint", monty_nodepint},
+				{"pop", monty_nodepop},
+				{"swap", monty_nodeswap},
+				{"add", monty_nodeadd},
+				{"nop", monty_nodenop},
+				{"sub", monty_nodesub},
+				{"div", monty_nodediv},
+				{"mul", monty_nodemul},
+				{"mod", monty_nodemod},
+				{"pchar", monty_nodepchar},
+				{"pstr", monty_nodepstr},
+				{"rotl", monty_noderotl},
+				{"rotr", monty_noderotr},
+				{"queue", monty_nodequeue},
+				{"stack", monty_nodestack},
 				{NULL, NULL}
 				};
 	unsigned int i = 0;
@@ -46,7 +46,7 @@ int exec(char *line_cont, stack_t **stack, unsigned int numPop, FILE *file_ptr)
 	{ fprintf(stderr, "L%d: unknown instruction %s\n", numPop, op);
 		fclose(file_ptr);
 		free(line_cont);
-		free_stack(*stack);
+		freeStacks(*stack);
 		exit(EXIT_FAILURE); }
 	return (1);
 }
