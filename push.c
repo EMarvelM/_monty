@@ -1,37 +1,37 @@
 #include "monty.h"
 /**
  * f_push - add node to the stack
- * @head: stack head
+ * @front: stack front
  * @counter: line_number
  * Return: no return
 */
-void f_push(stack_t **head, unsigned int counter)
+void f_push(stack_t **front, unsigned int counter)
 {
 	int n, j = 0, flag = 0;
 
-	if (bus.arg)
+	if (custom_struct.argument)
 	{
-		if (bus.arg[0] == '-')
+		if (custom_struct.argument[0] == '-')
 			j++;
-		for (; bus.arg[j] != '\0'; j++)
+		for (; custom_struct.argument[j] != '\0'; j++)
 		{
-			if (bus.arg[j] > 57 || bus.arg[j] < 48)
+			if (custom_struct.argument[j] > 57 || custom_struct.argument[j] < 48)
 				flag = 1; }
 		if (flag == 1)
 		{ fprintf(stderr, "L%d: usage: push integer\n", counter);
-			fclose(bus.file);
-			free(bus.content);
-			free_stack(*head);
+			fclose(custom_struct.file_pointer);
+			free(custom_struct.line_content);
+			free_stack(*front);
 			exit(EXIT_FAILURE); }}
 	else
 	{ fprintf(stderr, "L%d: usage: push integer\n", counter);
-		fclose(bus.file);
-		free(bus.content);
-		free_stack(*head);
+		fclose(custom_struct.file_pointer);
+		free(custom_struct.line_content);
+		free_stack(*front);
 		exit(EXIT_FAILURE); }
-	n = atoi(bus.arg);
-	if (bus.lifi == 0)
-		addnode(head, n);
+	n = atoi(custom_struct.argument);
+	if (custom_struct.stack_queue_flag == 0)
+		addnode(front, n);
 	else
-		addqueue(head, n);
+		addqueue(front, n);
 }
