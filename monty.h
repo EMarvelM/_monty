@@ -65,9 +65,9 @@ typedef struct instruction_s
 /*char  *flush_line(char *line_content);*/
 
 /*usr def fncs*/
-void f_push(stack_t **front, unsigned int number);
-void f_pall(stack_t **front, unsigned int number);
-void f_pint(stack_t **front, unsigned int number);
+void f_push(stack_t **front, unsigned int num);
+void f_pall(stack_t **front, unsigned int num);
+void f_pint(stack_t **front, unsigned int num);
 int execute(char *line_content, stack_t **front, unsigned int counter, FILE *file_pointer);
 void free_stack(stack_t *front);
 void f_pop(stack_t **front, unsigned int counter);
