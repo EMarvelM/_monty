@@ -1,4 +1,5 @@
 #include "monty.h"
+
 /**
  * monty_nodepop - prints the top
  * @front: stack front

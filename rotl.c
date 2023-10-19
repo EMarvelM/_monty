@@ -5,7 +5,7 @@
   *@numPop: line_number
   *Return: no return
  */
-void monty_noderotl(stack_t **front,  __attribute__((unused)) unsigned int numPop)
+void monty_noderotl(stack_t **front, __attribute__((unused)) unsigned int numPop)
 {
 	stack_t *temp = *front, *_get_n;
 

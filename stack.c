@@ -1,10 +1,11 @@
 #include "monty.h"
+
 /**
- * monty_nodestack - prints the top
- * @front: stack front
- * @numPop: line_number
- * Return: no return
-*/
+ * monty_nodestack - Sets the stack to stack mode.
+ * @front: Stack front (not used)
+ * @numPop: Line number (not used)
+ * Return: No return
+ */
 void monty_nodestack(stack_t **front, unsigned int numPop)
 {
 	(void)front;

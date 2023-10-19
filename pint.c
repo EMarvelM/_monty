@@ -1,10 +1,11 @@
 #include "monty.h"
+
 /**
- * monty_nodepint - prints the top
- * @front: stack front
- * @numPop: line_number
- * Return: no return
-*/
+ * monty_nodepint - Prints the top element of the stack.
+ * @front: Stack front
+ * @numPop: Line number
+ * Return: No return
+ */
 void monty_nodepint(stack_t **front, unsigned int numPop)
 {
 	if (*front == NULL)

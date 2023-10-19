@@ -13,19 +13,19 @@ void monty_nodepchar(stack_t **front, unsigned int numPop)
 	n_clone = *front;
 	if (!n_clone)
 	{
-		fprintf(stderr, "L%d: can't pchar, stack empty\n", numPop);
-		fclose(custom_struct.file_ptr);
-		free(custom_struct.line_cont);
-		freeStacks(*front);
-		exit(EXIT_FAILURE);
+	fprintf(stderr, "L%d: can't pchar, stack empty\n", numPop);
+	fclose(custom_struct.file_ptr);
+	free(custom_struct.line_cont);
+	freeStacks(*front);
+	exit(EXIT_FAILURE);
 	}
 	if (n_clone->n > 127 || n_clone->n < 0)
 	{
-		fprintf(stderr, "L%d: can't pchar, value out of range\n", numPop);
-		fclose(custom_struct.file_ptr);
-		free(custom_struct.line_cont);
-		freeStacks(*front);
-		exit(EXIT_FAILURE);
+	fprintf(stderr, "L%d: can't pchar, value out of range\n", numPop);
+	fclose(custom_struct.file_ptr);
+	free(custom_struct.line_cont);
+	freeStacks(*front);
+	exit(EXIT_FAILURE);
 	}
 	printf("%c\n", n_clone->n);
 }

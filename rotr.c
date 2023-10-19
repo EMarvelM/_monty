@@ -1,9 +1,10 @@
 #include "monty.h"
+
 /**
-  *monty_noderotr- rotates the stack to the bottom
-  *@front: stack front
-  *@numPop: line_number
-  *Return: no return
+ *monty_noderotr- rotates the stack to the bottom
+ *@front: stack front
+ *@numPop: line_number
+ *Return: no return
  */
 void monty_noderotr(stack_t **front, __attribute__((unused)) unsigned int numPop)
 {

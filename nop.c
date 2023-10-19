@@ -1,4 +1,5 @@
 #include "monty.h"
+
 /**
   *monty_nodenop- nothing
   *@front: stack front

@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	while (read_line > 0)
+
 	{
 		line_cont = NULL;
 		read_line = getline(&line_cont, &sz, file_ptr);
