@@ -2,7 +2,7 @@
 custom_struct_t custom_struct = {NULL, NULL, NULL, 0};
 /**
 * main - monty code interpreter
-* @argc: number of arguments
+* @argc: num of arguments
 * @argv: monty file_pointer location
 * Return: 0 on success
 */
