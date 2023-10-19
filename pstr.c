@@ -8,18 +8,18 @@
 */
 void f_pstr(stack_t **front, unsigned int num_popped)
 {
-	stack_t *h;
+	stack_t *n_clone;
 	(void)num_popped;
 
-	h = *front;
-	while (h)
+	n_clone = *front;
+	while (n_clone)
 	{
-		if (h->n > 127 || h->n <= 0)
+		if (n_clone->n > 127 || n_clone->n <= 0)
 		{
 			break;
 		}
-		printf("%c", h->n);
-		h = h->next;
+		printf("%c", n_clone->n);
+		n_clone = n_clone->next;
 	}
 	printf("\n");
 }
