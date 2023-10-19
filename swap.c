@@ -2,10 +2,10 @@
 /**
  * f_swap - adds the top two elements of the stack.
  * @front: stack front
- * @counter: line_number
+ * @num_popped: line_number
  * Return: no return
 */
-void f_swap(stack_t **front, unsigned int counter)
+void f_swap(stack_t **front, unsigned int num_popped)
 {
 	stack_t *h;
 	int len = 0, aux;
@@ -18,7 +18,7 @@ void f_swap(stack_t **front, unsigned int counter)
 	}
 	if (len < 2)
 	{
-		fprintf(stderr, "L%d: can't swap, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", num_popped);
 		fclose(custom_struct.file_pointer);
 		free(custom_struct.line_content);
 		free_stack(*front);
