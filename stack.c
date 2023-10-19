@@ -1,13 +1,13 @@
 #include "monty.h"
 /**
  * f_stack - prints the top
- * @head: stack head
+ * @front: stack front
  * @counter: line_number
  * Return: no return
 */
-void f_stack(stack_t **head, unsigned int counter)
+void f_stack(stack_t **front, unsigned int counter)
 {
-	(void)head;
+	(void)front;
 	(void)counter;
 	custom_struct.stack_queue_flag = 0;
 }
