@@ -8,17 +8,17 @@
 void addnode(stack_t **front, int n)
 {
 
-	stack_t *new_node, *aux;
+	stack_t *_newNode, *_get_n;
 
-	aux = *front;
-	new_node = malloc(sizeof(stack_t));
-	if (new_node == NULL)
+	_get_n = *front;
+	_newNode = malloc(sizeof(stack_t));
+	if (_newNode == NULL)
 	{ printf("Error\n");
 		exit(0); }
-	if (aux)
-		aux->prev = new_node;
-	new_node->n = n;
-	new_node->next = *front;
-	new_node->prev = NULL;
-	*front = new_node;
+	if (_get_n)
+		_get_n->prev = _newNode;
+	_newNode->n = n;
+	_newNode->next = *front;
+	_newNode->prev = NULL;
+	*front = _newNode;
 }
