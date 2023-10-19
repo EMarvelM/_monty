@@ -2,10 +2,10 @@
 /**
   *f_sub- sustration
   *@front: stack front
-  *@counter: line_number
+  *@num_popped: line_number
   *Return: no return
  */
-void f_sub(stack_t **front, unsigned int counter)
+void f_sub(stack_t **front, unsigned int num_popped)
 {
 	stack_t *aux;
 	int sus, nodes;
@@ -15,7 +15,7 @@ void f_sub(stack_t **front, unsigned int counter)
 		aux = aux->next;
 	if (nodes < 2)
 	{
-		fprintf(stderr, "L%d: can't sub, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't sub, stack too short\n", num_popped);
 		fclose(custom_struct.file_pointer);
 		free(custom_struct.line_content);
 		free_stack(*front);
