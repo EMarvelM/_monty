@@ -7,15 +7,15 @@
 */
 void f_pall(stack_t **front, unsigned int num_popped)
 {
-	stack_t *h;
+	stack_t *n_clone;
 	(void)num_popped;
 
-	h = *front;
-	if (h == NULL)
+	n_clone = *front;
+	if (n_clone == NULL)
 		return;
-	while (h)
+	while (n_clone)
 	{
-		printf("%d\n", h->n);
-		h = h->next;
+		printf("%d\n", n_clone->n);
+		n_clone = n_clone->next;
 	}
 }
